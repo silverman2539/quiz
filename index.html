@@ -1,0 +1,2154 @@
+<html>
+	<head>
+		<title>Quiz to Show if You Truly Love Me</title>
+		<link rel="shortcut icon" href="emoji.ico">
+		
+		<style>
+			body
+			{
+				background-color: whitesmoke;
+				color: gray;
+				border-style: double;
+				border-color: gray;
+				text-align: center;
+				font-size: 25px;
+				font-style: Verdana;
+				padding: 25px;
+			}
+			button
+			{
+				border-style: solid;
+				border-color: gray;
+				color:gray;
+				background-color: whitesmoke;
+				font-size: 20px;
+				font-style: Verdana;
+			}
+			div
+			{
+				border-style: solid;
+				border-width: thin;
+				padding: 25px;
+				padding-top: 0px;
+				margin: auto;
+			}
+            input
+            {
+                font-size: 15px;
+				font-style: Verdana;
+                text-align: center;
+				background-color: white;
+				border-style: solid;
+				border-color: gray;
+				color: gray;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<p>Quiz to Show if you Truly Love Me</p>
+		<p style="font-size:20px">Enter answers in all lowercase</p>
+		<p id="finalScore" style="font-size:35px; color:green;"></p>
+		<button id="startButton" onclick="Begin()" style="background-color:white;">Click to Begin!</button>
+		<div id="Question1" style="width: 500; background-color:mistyrose; border-color:firebrick; color:firebrick; display:none;">
+			<p>Question 1</p>
+			<p>How do I organize things?</p>
+			<button id="1a" onclick="Question1a()">Alphabetically</button>
+			&nbsp;
+			<button id="1b" onclick="Question1b()">By color</button>
+			<br><br>
+			<button id="1c" onclick="Question1c()">It depends</button>
+			&nbsp;
+			<button id="1d" onclick="Question1d()">Randomly</button>
+		</div>
+		
+		<br id="br1" style="display:none;">
+		
+		<div id="Question2" style="width: 500; background-color:oldlace; border-color:tomato; color:tomato; display:none;">
+			<p>Question 2</p>
+			<p>How many times have I rearranged my room?</p>
+			<button id="2a" onclick="Question2a()">1</button>
+			&nbsp;
+			<button id="2b" onclick="Question2b()">2</button>
+			&nbsp;
+			<button id="2c" id="1a" onclick="Question2c()">3</button>
+			&nbsp;
+			<button id="2d" onclick="Question2d()">4</button>
+		</div>
+		
+		<br id="br2" style="display:none;">
+		
+		<div id="Question3" style="width: 500; background-color:ivory; border-color:gold; color:gold; display:none;">
+			<p>Question 3</p>
+			<p>What's my favorite band?</p>
+			<button id="3a" onclick="Question3a()">Fall Out Boy</button>
+			&nbsp;
+			<button id="3b" onclick="Question3b()">MCR</button>
+			<br><br>
+			<button id="3c" onclick="Question3c()">Panic</button>
+			&nbsp;
+			<button id="3d" onclick="Question3d()">Twenty One Pilots</button>
+		</div>
+		
+		<br id="br3" style="display:none;">
+		
+		<div id="Question4" style="width: 500; background-color:honeydew; border-color:darkgreen; color:darkgreen; display:none;">
+			<p>Question 4</p>
+			<p>When did I realize I was gay?</p>
+			<p>(bonus if you can say what I came out as)</p>
+			<button id="4a" onclick="Question4a()">6th grade</button>
+			&nbsp;
+			<button id="4b" onclick="Question4b()">7th grade</button>
+			<br><br>
+			<button id="4c" onclick="Question4c()">8th grade</button>
+			&nbsp;
+			<button id="4d" onclick="Question4d()">9th grade</button>
+			<br><br>
+			<input id="4" type="text;">
+			<br><br>
+			<button id="4submit" onclick="Question4()" style="font-size:15px;">Sumbit Bonus</button>
+		</div>
+		
+		<br id="br4" style="display:none;">
+		
+		<div id="Question5" style="width: 500; background-color:aliceblue; border-color:steelblue; color:steelblue; display:none;">
+			<p>Question 5</p>
+			<p>Where did I live before I moved here?</p>
+			<button id="5a" onclick="Question5a()">Boston</button>
+			&nbsp;
+			<button id="5b" onclick="Question5b()">Halifax</button>
+			<br><br>
+			<button id="5c" onclick="Question5c()">Waltham</button>
+			&nbsp;
+			<button id="5d" onclick="Question5d()">Winchendon</button>
+		</div>
+		
+		<br id="br5" style="display:none;">
+		
+		<div id="Question6" style="width: 500; background-color:lavender; border-color:rebeccapurple; color:rebeccapurple; display:none;">
+			<p>Question 6</p>
+			<p>How old are my dogs? (pick two)</p>
+			<button id="6a" onclick="Question6a()">3</button>
+			&nbsp;
+			<button id="6b" onclick="Question6b()">4</button>
+			&nbsp;
+			<button id="6c" onclick="Question6c()">5</button>
+			<br><br>
+			<button id="6d" onclick="Question6d()">6</button>
+			&nbsp;
+			<button id="6e" onclick="Question6e()">7</button>
+			&nbsp;
+			<button id="6f" onclick="Question6f()">8</button>
+		</div>
+		
+		<br id="br6" style="display:none;">
+		
+		<div id="Question7" style="width: 500; background-color:lavenderblush; border-color:palevioletred; color:palevioletred; display:none;">
+			<p>Question 7</p>
+			<p>Which Youtubers have I watched obsessively? (pick four)</p>
+			<button id="7a" onclick="Question7a()">How To Cake it</button>
+			&nbsp;
+			<button id="7b" onclick="Question7b()">Jessie Paege</button>
+			<br><br>
+			<button id="7c" onclick="Question7c()">Loey Lane</button>
+			&nbsp;
+			<button id="7d" onclick="Question7d()">Miles McKenna</button>
+			<br><br>
+			<button id="7e" id="1a" onclick="Question7e()">Psych2Go</button>
+			&nbsp;
+			<button id="7f" onclick="Question7f()">The Pop Song Professor</button>
+		</div>
+		
+		<br id="br7" style="display:none;">
+		
+		<div id="Question8" style="width: 500; background-color:mistyrose; border-color:firebrick; color:firebrick; display:none;">
+			<p>Question 8</p>
+			<p>Cookies are my favorite dessert.</p>
+			<button id="8t" onclick="Question8t()">True</button>
+			&nbsp;
+			<button id="8f" onclick="Question8f()">False</button>
+		</div>
+		
+		<br id="br8" style="display:none;">
+		
+		<div id="Question9" style="width: 500; background-color:oldlace; border-color:tomato; color:tomato; display:none;">
+			<p>Question 9</p>
+			<p>I hate everyone.</p>
+			<button id="9t" onclick="Question9t()">True</button>
+			&nbsp;
+			<button id="9f" onclick="Question9f()">False</button>
+		</div>
+		
+		<br id="br9" style="display:none;">
+		
+		<div id="Question10" style="width: 500; background-color:ivory; border-color:gold; color:gold; display:none;">
+			<p>Question 10</p>
+			<p>I like making bracelets.</p>
+			<button id="10t" onclick="Question10t()">True</button>
+			&nbsp;
+			<button id="10f" onclick="Question10f()">False</button>
+		</div>
+		
+		<br id="br10" style="display:none;">
+		
+		<div id="Question11" style="width: 500; background-color:honeydew; border-color:darkgreen; color:darkgreen; display:none;">
+			<p>Question 11</p>
+			<p>I like my bed where it is.</p>
+			<button id="11t" onclick="Question11t()">True</button>
+			&nbsp;
+			<button id="11f" onclick="Question11f()">False</button>
+		</div>
+		
+		<br id="br11" style="display:none;">
+		
+		<div id="Question12" style="width: 500; background-color:aliceblue; border-color:steelblue; color:steelblue; display:none;">
+			<p>Question 12</p>
+			<p>I like painting.</p>
+			<button id="12t" onclick="Question12t()">True</button>
+			&nbsp;
+			<button id="12f" onclick="Question12f()">False</button>
+		</div>
+		
+		<br id="br12" style="display:none;">
+		
+		<div id="Question13" style="width: 500; background-color:lavender; border-color:rebeccapurple; color:rebeccapurple; display:none;">
+			<p>Question 13</p>
+			<p>I'm pretty.</p>
+			<p>(think about what I would put as an answer)</p>
+			<button id="13t" onclick="Question13t()">True</button>
+			&nbsp;
+			<button id="13f" onclick="Question13f()">False</button>
+			<div id="13info" style="display:none; border-style:none; padding-left:75; padding-right:75; padding-bottom:0px;">
+				<br>
+				<p id="13infot" style="font-size:15px; display:none;">You get an extra point for saying yes even tho you knew I would say no</p>
+				<p id="13infof" style="font-size:15px; display:none;">You would have gotten an extra point for saying yes even tho you knew I would say no</p>
+			</div>
+		</div>
+		
+		<br id="br13" style="display:none;">
+		
+		<div id="Question14" style="width: 500; background-color:lavenderblush; border-color:palevioletred; color:palevioletred; display:none;">
+			<p>Question 14</p>
+			<p>I'm scared of dogs.</p>
+			<button id="14t" onclick="Question14t()">True</button>
+			&nbsp;
+			<button id="14f" onclick="Question14f()">False</button>
+		</div>
+		
+		<br id="br14" style="display:none;">
+		
+		<div id="Question15" style="width: 500; background-color:mistyrose; border-color:firebrick; color:firebrick; display:none;">
+			<p>Question 15</p>
+			<p>What are my four favorite colors?</p>
+			<p>(bonus if you get them in the right order)</p>
+			<input id="15a" type="text;" placeholder="favorite">
+			<br><br>
+			<input id="15b" type="text;">
+			<br><br>
+			<input id="15c" type="text;">
+			<br><br>
+			<input id="15d" type="text;" placeholder="least favorite">
+			<br><br>
+			<button id="15submit" onclick="Question15()">Enter Answer</button>
+			<div id="15info" style="border-style:none; padding-bottom:0px; display:none;">
+				<br>
+				<p style="font-size:20px; color:green;">Good job!</p>
+				<p style="font-size:20px; color:green;">You got the right order!</p>
+			</div>
+		</div>
+		
+		<br id="br15" style="display:none;">
+		
+		<div id="Question16" style="width: 500; background-color:oldlace; border-color:tomato; color:tomato; display:none;">
+			<p>Question 16</p>
+			<p>What are the names of the children I watch a lot?</p>
+			<p>(bonus if you can tell me which one is the baby)</p>
+			<input id="16a" type="text;">
+			<br><br>
+			<input id="16b" type="text;">
+			<br><br>
+			<input id="16c" type="text;">
+			<br><br>
+			<input id="16d" type="text;" placeholder="baby">
+			<br><br>
+			<button id="16submit" onclick="Question16()">Enter Answer</button>
+			<div id="16info" style="border-style:none; padding-bottom:0px; display:none;">
+				<br>
+				<p style="font-size:20px; color:green;">Good job!</p>
+				<p style="font-size:20px; color:green;">You got the right baby name!</p>
+			</div>
+		</div>
+		
+		<br id="br16" style="display:none;">
+		
+		<div id="Question17" style="width: 500; background-color:ivory; border-color:gold; color:gold; display:none;">
+			<p>Question 17</p>
+			<p>What's my favorite book?</p>
+			<input id="17" type="text;">
+			<br><br>
+			<button id="17submit" onclick="Question17()">Enter Answer</button>
+		</div>
+		
+		<br id="br17" style="display:none;">
+		
+		<div id="Question18" style="width: 500; background-color:honeydew; border-color:darkgreen; color:darkgreen; display:none;">
+			<p>Question 18</p>
+			<p>What's my favorite musical?</p>
+			<input id="18" type="text;">
+			<br><br>
+			<button id="18submit" onclick="Question18()">Enter Answer</button>
+		</div>
+		
+		<br id="br18" style="display:none;">
+		
+		<div id="Question19" style="width: 500; background-color:aliceblue; border-color:steelblue; color:steelblue; display:none;">
+			<p>Question 19</p>
+			<p>What's my favorite season?</p>
+			<input id="19" type="text;">
+			<br><br>
+			<button id="19submit" onclick="Question19()">Enter Answer</button>
+		</div>
+		
+		<br id="br19" style="display:none;">
+		
+		<div id="Question20" style="width: 500; background-color:lavender; border-color:rebeccapurple; color:rebeccapurple; display:none;">
+			<p>Question 20</p>
+			<p>When I was younger what job did I want to do when I'm older?</p>
+			<input id="20" type="text;">
+			<br><br>
+			<button id="20submit" onclick="Question20()">Enter Answer</button>
+		</div>
+		
+		<br id="br20" style="display:none;">
+		
+		<div id="Question21" style="width: 500; background-color:lavenderblush; border-color:palevioletred; color:palevioletred; display:none;">
+			<p>Question 21</p>
+			<p>When's my birthday?</p>
+			<input id="21" type="text;">
+			<br><br>
+			<button id="21submit" onclick="Question21()">Enter Answer</button>
+		</div>
+		
+		<br id="br21" style="display:none;">
+		<button id="submit" onclick="Submit()" style="background-color:white; display:none;">Submit Answers</button>
+	</body>
+	
+	<script>
+		var q1 = 0;
+		var q2 = 0;
+		var q3 = 0;
+		var q4 = 0;
+		var q4bonus = 0;
+		var q5 = 0;
+		var q6A = 0;
+		var q6B = 0;
+		var q6amount = 0;
+		var q6a = 0;
+		var q6b = 0;
+		var q6c = 0;
+		var q6d = 0;
+		var q6e = 0;
+		var q6f = 0;
+		var q7A = 0;
+		var q7B = 0;
+		var q7C = 0;
+		var q7D = 0;
+		var q7amount = 0;
+		var q7a = 0;
+		var q7b = 0;
+		var q7c = 0;
+		var q7d = 0;
+		var q7e = 0;
+		var q7f = 0;
+		var q8 = 0;
+		var q9 = 0;
+		var q10 = 0;
+		var q11 = 0;
+		var q12 = 0;
+		var q13 = 0;
+		var q14 = 0;
+		var q15A = 0;
+		var q15B = 0;
+		var q15C = 0;
+		var q15D = 0;
+		var q15bonus = 0;
+		var q15extra = 0;
+		var q15Abonus = 0;
+		var q15Bbonus = 0;
+		var q15Cbonus = 0;
+		var q15Dbonus = 0;
+		var q16A = 0;
+		var q16B = 0;
+		var q16C = 0;
+		var q16D = 0;
+		var q17 = 0;
+		var q18 = 0;
+		var q19 = 0;
+		var q20 = 0;
+		var q21 = 0;
+		
+		function Begin()
+		{
+			document.getElementById("startButton").style.display = "none";
+			document.getElementById("Question1").style.display = "";
+		}
+		function Submit()
+		{
+			q15bonus = q15Abonus + q15Bbonus + q15Cbonus + q15Dbonus;
+			if (q15bonus == 4)
+			{
+				q15extra = 0.5;
+			}
+			else
+			{
+				q15extra = 0;
+			}
+			var score = q1 + q2 + q3 + q4 + q4bonus + q5 + q6A + q6B + q7A + q7B +q7C + q7D + q8 + q9 + q10 + q11 + q12 + q13 + q14 + q15A + q15B + q15C + q15D + q15extra + q16A + q16B + q16C + q16D + q17 + q18 + q19 + q20 + q21;
+			var percent = score * (100 / 21);
+			document.getElementById("finalScore").innerHTML = Math.round(percent) + "%";
+			
+			document.getElementById("1a").disabled = true;
+			document.getElementById("1b").disabled = true;
+			document.getElementById("1c").disabled = true;
+			document.getElementById("1d").disabled = true;
+			document.getElementById("2a").disabled = true;
+			document.getElementById("2b").disabled = true;
+			document.getElementById("2c").disabled = true;
+			document.getElementById("2d").disabled = true;
+			document.getElementById("3a").disabled = true;
+			document.getElementById("3b").disabled = true;
+			document.getElementById("3c").disabled = true;
+			document.getElementById("3d").disabled = true;
+			document.getElementById("4a").disabled = true;
+			document.getElementById("4b").disabled = true;
+			document.getElementById("4c").disabled = true;
+			document.getElementById("4d").disabled = true;
+			document.getElementById("4").disabled = true;
+			document.getElementById("4submit").disabled = true;
+			document.getElementById("5a").disabled = true;
+			document.getElementById("5b").disabled = true;
+			document.getElementById("5c").disabled = true;
+			document.getElementById("5d").disabled = true;
+			document.getElementById("6a").disabled = true;
+			document.getElementById("6b").disabled = true;
+			document.getElementById("6c").disabled = true;
+			document.getElementById("6d").disabled = true;
+			document.getElementById("6e").disabled = true;
+			document.getElementById("6f").disabled = true;
+			document.getElementById("7a").disabled = true;
+			document.getElementById("7b").disabled = true;
+			document.getElementById("7c").disabled = true;
+			document.getElementById("7d").disabled = true;
+			document.getElementById("7e").disabled = true;
+			document.getElementById("7f").disabled = true;
+			document.getElementById("8t").disabled = true;
+			document.getElementById("8f").disabled = true;
+			document.getElementById("9t").disabled = true;
+			document.getElementById("9f").disabled = true;
+			document.getElementById("10t").disabled = true;
+			document.getElementById("10f").disabled = true;
+			document.getElementById("11t").disabled = true;
+			document.getElementById("11f").disabled = true;
+			document.getElementById("12t").disabled = true;
+			document.getElementById("12f").disabled = true;
+			document.getElementById("13t").disabled = true;
+			document.getElementById("13f").disabled = true;
+			document.getElementById("14t").disabled = true;
+			document.getElementById("14f").disabled = true;
+			document.getElementById("15a").disabled = true;
+			document.getElementById("15b").disabled = true;
+			document.getElementById("15c").disabled = true;
+			document.getElementById("15d").disabled = true;
+			document.getElementById("15submit").disabled = true;
+			document.getElementById("16a").disabled = true;
+			document.getElementById("16b").disabled = true;
+			document.getElementById("16c").disabled = true;
+			document.getElementById("16d").disabled = true;
+			document.getElementById("16submit").disabled = true;
+			document.getElementById("17").disabled = true;
+			document.getElementById("17submit").disabled = true;
+			document.getElementById("18").disabled = true;
+			document.getElementById("18submit").disabled = true;
+			document.getElementById("19").disabled = true;
+			document.getElementById("19submit").disabled = true;
+			document.getElementById("20").disabled = true;
+			document.getElementById("20submit").disabled = true;
+			document.getElementById("21").disabled = true;
+			document.getElementById("21submit").disabled = true;
+			document.getElementById("submit").disabled = true;
+			
+			document.getElementById("13info").style.display = "";
+			
+			document.getElementById("1c").style.backgroundColor = "green";
+			document.getElementById("1c").style.color = "white";
+			document.getElementById("1c").style.borderColor = "white";
+			document.getElementById("2b").style.backgroundColor = "green";
+			document.getElementById("2b").style.color = "white";
+			document.getElementById("2b").style.borderColor = "white";
+			document.getElementById("3a").style.backgroundColor = "green";
+			document.getElementById("3a").style.color = "white";
+			document.getElementById("3a").style.borderColor = "white";
+			document.getElementById("4b").style.backgroundColor = "green";
+			document.getElementById("4b").style.color = "white";
+			document.getElementById("4b").style.borderColor = "white";
+			document.getElementById("5c").style.backgroundColor = "green";
+			document.getElementById("5c").style.color = "white";
+			document.getElementById("5c").style.borderColor = "white";
+			document.getElementById("6b").style.backgroundColor = "green";
+			document.getElementById("6b").style.color = "white";
+			document.getElementById("6b").style.borderColor = "white";
+			document.getElementById("6e").style.backgroundColor = "green";
+			document.getElementById("6e").style.color = "white";
+			document.getElementById("6e").style.borderColor = "white";
+			document.getElementById("7a").style.backgroundColor = "green";
+			document.getElementById("7a").style.color = "white";
+			document.getElementById("7a").style.borderColor = "white";
+			document.getElementById("7b").style.backgroundColor = "green";
+			document.getElementById("7b").style.color = "white";
+			document.getElementById("7b").style.borderColor = "white";
+			document.getElementById("7c").style.backgroundColor = "green";
+			document.getElementById("7c").style.color = "white";
+			document.getElementById("7c").style.borderColor = "white";
+			document.getElementById("7d").style.backgroundColor = "green";
+			document.getElementById("7d").style.color = "white";
+			document.getElementById("7d").style.borderColor = "white";
+			document.getElementById("8f").style.backgroundColor = "green";
+			document.getElementById("8f").style.color = "white";
+			document.getElementById("8f").style.borderColor = "white";
+			document.getElementById("9f").style.backgroundColor = "green";
+			document.getElementById("9f").style.color = "white";
+			document.getElementById("9f").style.borderColor = "white";
+			document.getElementById("10f").style.backgroundColor = "green";
+			document.getElementById("10f").style.color = "white";
+			document.getElementById("10f").style.borderColor = "white";
+			document.getElementById("11f").style.backgroundColor = "green";
+			document.getElementById("11f").style.color = "white";
+			document.getElementById("11f").style.borderColor = "white";
+			document.getElementById("12t").style.backgroundColor = "green";
+			document.getElementById("12t").style.color = "white";
+			document.getElementById("12t").style.borderColor = "white";
+			document.getElementById("13f").style.backgroundColor = "green";
+			document.getElementById("13f").style.color = "white";
+			document.getElementById("13f").style.borderColor = "white";
+			document.getElementById("14t").style.backgroundColor = "green";
+			document.getElementById("14t").style.color = "white";
+			document.getElementById("14t").style.borderColor = "white";
+			
+			document.getElementById("15a").placeholder = "";
+			document.getElementById("15d").placeholder = "";
+			document.getElementById("16d").placeholder = "";
+			
+			
+			if (q4bonus == 0.5)
+			{
+				document.getElementById("4").style.backgroundColor = "green";
+				document.getElementById("4").style.color = "white";
+				document.getElementById("4").style.borderColor = "white";
+			}
+			
+			var answer15a=document.getElementById("15a").value;
+			var answer15b=document.getElementById("15b").value;
+			var answer15c=document.getElementById("15c").value;
+			var answer15d=document.getElementById("15d").value;
+			if (answer15a == "purple")
+			{
+				document.getElementById("15a").style.backgroundColor = "green";
+				document.getElementById("15a").style.color = "white";
+				document.getElementById("15a").style.borderColor = "white";
+			}
+			else if (answer15b == "purple")
+			{
+				document.getElementById("15b").style.backgroundColor = "green";
+				document.getElementById("15b").style.color = "white";
+				document.getElementById("15b").style.borderColor = "white";
+			}
+			else if (answer15c == "purple")
+			{
+				document.getElementById("15c").style.backgroundColor = "green";
+				document.getElementById("15c").style.color = "white";
+				document.getElementById("15c").style.borderColor = "white";
+			}
+			else if (answer15d == "purple")
+			{
+				document.getElementById("15d").style.backgroundColor = "green";
+				document.getElementById("15d").style.color = "white";
+				document.getElementById("15d").style.borderColor = "white";
+			}
+			if (answer15a == "blue")
+			{
+				document.getElementById("15a").style.backgroundColor = "green";
+				document.getElementById("15a").style.color = "white";
+				document.getElementById("15a").style.borderColor = "white";
+			}
+			else if (answer15b == "blue")
+			{
+				document.getElementById("15b").style.backgroundColor = "green";
+				document.getElementById("15b").style.color = "white";
+				document.getElementById("15b").style.borderColor = "white";
+			}
+			else if (answer15c == "blue")
+			{
+				document.getElementById("15c").style.backgroundColor = "green";
+				document.getElementById("15c").style.color = "white";
+				document.getElementById("15c").style.borderColor = "white";
+			}
+			else if (answer15d == "blue")
+			{
+				document.getElementById("15d").style.backgroundColor = "green";
+				document.getElementById("15d").style.color = "white";
+				document.getElementById("15d").style.borderColor = "white";
+			}
+			if (answer15a == "red")
+			{
+				document.getElementById("15a").style.backgroundColor = "green";
+				document.getElementById("15a").style.color = "white";
+				document.getElementById("15a").style.borderColor = "white";
+			}
+			else if (answer15b == "red")
+			{
+				document.getElementById("15b").style.backgroundColor = "green";
+				document.getElementById("15b").style.color = "white";
+				document.getElementById("15b").style.borderColor = "white";
+			}
+			else if (answer15c == "red")
+			{
+				document.getElementById("15c").style.backgroundColor = "green";
+				document.getElementById("15c").style.color = "white";
+				document.getElementById("15c").style.borderColor = "white";
+			}
+			else if (answer15d == "red")
+			{
+				document.getElementById("15d").style.backgroundColor = "green";
+				document.getElementById("15d").style.color = "white";
+				document.getElementById("15d").style.borderColor = "white";
+			}
+			if (answer15a == "pink")
+			{
+				document.getElementById("15a").style.backgroundColor = "green";
+				document.getElementById("15a").style.color = "white";
+				document.getElementById("15a").style.borderColor = "white";
+			}
+			else if (answer15b == "pink")
+			{
+				document.getElementById("15b").style.backgroundColor = "green";
+				document.getElementById("15b").style.color = "white";
+				document.getElementById("15b").style.borderColor = "white";
+			}
+			else if (answer15c == "pink")
+			{
+				document.getElementById("15c").style.backgroundColor = "green";
+				document.getElementById("15c").style.color = "white";
+				document.getElementById("15c").style.borderColor = "white";
+			}
+			else if (answer15d == "pink")
+			{
+				document.getElementById("15d").style.backgroundColor = "green";
+				document.getElementById("15d").style.color = "white";
+				document.getElementById("15d").style.borderColor = "white";
+			}
+			if (q15extra == 0.5)
+			{
+				document.getElementById("15info").style.display = "";
+			}
+			
+			var answer16a=document.getElementById("16a").value;
+			var answer16b=document.getElementById("16b").value;
+			var answer16c=document.getElementById("16c").value;
+			var answer16d=document.getElementById("16d").value;
+			if (answer16a == "jackson")
+			{
+				document.getElementById("16a").style.backgroundColor = "green";
+				document.getElementById("16a").style.color = "white";
+				document.getElementById("16a").style.borderColor = "white";
+			}
+			else if (answer16b == "jackson")
+			{
+				document.getElementById("16b").style.backgroundColor = "green";
+				document.getElementById("16b").style.color = "white";
+				document.getElementById("16b").style.borderColor = "white";
+			}
+			else if (answer16c == "jackson")
+			{
+				document.getElementById("16c").style.backgroundColor = "green";
+				document.getElementById("16c").style.color = "white";
+				document.getElementById("16c").style.borderColor = "white";
+			}
+			else if (answer16d == "jackson")
+			{
+				document.getElementById("16d").style.backgroundColor = "green";
+				document.getElementById("16d").style.color = "white";
+				document.getElementById("16d").style.borderColor = "white";
+			}
+			else if (answer16a == "jaxon")
+			{
+				document.getElementById("16a").value = "jackson";
+				document.getElementById("16a").style.backgroundColor = "green";
+				document.getElementById("16a").style.color = "white";
+				document.getElementById("16a").style.borderColor = "white";
+			}
+			else if (answer16b == "jaxon")
+			{
+				document.getElementById("16b").value = "jackson";
+				document.getElementById("16b").style.backgroundColor = "green";
+				document.getElementById("16b").style.color = "white";
+				document.getElementById("16b").style.borderColor = "white";
+			}
+			else if (answer16c == "jaxon")
+			{
+				document.getElementById("16c").value = "jackson";
+				document.getElementById("16c").style.backgroundColor = "green";
+				document.getElementById("16c").style.color = "white";
+				document.getElementById("16c").style.borderColor = "white";
+			}
+			else if (answer16d == "jaxon")
+			{
+				document.getElementById("16d").value = "jackson";
+				document.getElementById("16d").style.backgroundColor = "green";
+				document.getElementById("16d").style.color = "white";
+				document.getElementById("16d").style.borderColor = "white";
+			}
+			if (answer16a == "max")
+			{
+				document.getElementById("16a").style.backgroundColor = "green";
+				document.getElementById("16a").style.color = "white";
+				document.getElementById("16a").style.borderColor = "white";
+			}
+			else if (answer16b == "max")
+			{
+				document.getElementById("16b").style.backgroundColor = "green";
+				document.getElementById("16b").style.color = "white";
+				document.getElementById("16b").style.borderColor = "white";
+			}
+			else if (answer16c == "max")
+			{
+				document.getElementById("16c").style.backgroundColor = "green";
+				document.getElementById("16c").style.color = "white";
+				document.getElementById("16c").style.borderColor = "white";
+			}
+			else if (answer16d == "max")
+			{
+				document.getElementById("16d").style.backgroundColor = "green";
+				document.getElementById("16d").style.color = "white";
+				document.getElementById("16d").style.borderColor = "white";
+			}
+			if (answer16a == "minna")
+			{
+				document.getElementById("16a").style.backgroundColor = "green";
+				document.getElementById("16a").style.color = "white";
+				document.getElementById("16a").style.borderColor = "white";
+			}
+			else if (answer16b == "minna")
+			{
+				document.getElementById("16b").style.backgroundColor = "green";
+				document.getElementById("16b").style.color = "white";
+				document.getElementById("16b").style.borderColor = "white";
+			}
+			else if (answer16c == "minna")
+			{
+				document.getElementById("16c").style.backgroundColor = "green";
+				document.getElementById("16c").style.color = "white";
+				document.getElementById("16c").style.borderColor = "white";
+			}
+			else if (answer16d == "minna")
+			{
+				document.getElementById("16d").style.backgroundColor = "green";
+				document.getElementById("16d").style.color = "white";
+				document.getElementById("16d").style.borderColor = "white";
+			}
+			else if (answer16a == "mina")
+			{
+				document.getElementById("16a").value = "minna";
+				document.getElementById("16a").style.backgroundColor = "green";
+				document.getElementById("16a").style.color = "white";
+				document.getElementById("16a").style.borderColor = "white";
+			}
+			else if (answer16b == "mina")
+			{
+				document.getElementById("16b").value = "minna";
+				document.getElementById("16b").style.backgroundColor = "green";
+				document.getElementById("16b").style.color = "white";
+				document.getElementById("16b").style.borderColor = "white";
+			}
+			else if (answer16c == "mina")
+			{
+				document.getElementById("16c").value = "minna";
+				document.getElementById("16c").style.backgroundColor = "green";
+				document.getElementById("16c").style.color = "white";
+				document.getElementById("16c").style.borderColor = "white";
+			}
+			else if (answer16d == "mina")
+			{
+				document.getElementById("16d").value = "minna";
+				document.getElementById("16d").style.backgroundColor = "green";
+				document.getElementById("16d").style.color = "white";
+				document.getElementById("16d").style.borderColor = "white";
+			}
+			if (answer16d == "ronan")
+			{
+				document.getElementById("16info").style.display = "";
+				document.getElementById("16d").style.backgroundColor = "green";
+				document.getElementById("16d").style.color = "white";
+				document.getElementById("16d").style.borderColor = "white";
+			}
+			else if (answer16a == "ronan")
+			{
+				document.getElementById("16a").style.backgroundColor = "green";
+				document.getElementById("16a").style.color = "white";
+				document.getElementById("16a").style.borderColor = "white";
+			}
+			else if (answer16b == "ronan")
+			{
+				document.getElementById("16b").style.backgroundColor = "green";
+				document.getElementById("16b").style.color = "white";
+				document.getElementById("16b").style.borderColor = "white";
+			}
+			else if (answer16c == "ronan")
+			{
+				document.getElementById("16c").style.backgroundColor = "green";
+				document.getElementById("16c").style.color = "white";
+				document.getElementById("16c").style.borderColor = "white";
+			}
+			
+			if (q17 == 1)
+			{
+				document.getElementById("17").style.backgroundColor = "green";
+				document.getElementById("17").style.color = "white";
+				document.getElementById("17").style.borderColor = "white";
+			}
+			if (q18 == 1)
+			{
+				document.getElementById("18").style.backgroundColor = "green";
+				document.getElementById("18").style.color = "white";
+				document.getElementById("18").style.borderColor = "white";
+			}
+			if (q19 == 1)
+			{
+				document.getElementById("19").style.backgroundColor = "green";
+				document.getElementById("19").style.color = "white";
+				document.getElementById("19").style.borderColor = "white";
+			}
+			else if (q19 == 0.5)
+			{
+				document.getElementById("19").value = "fall";
+				document.getElementById("19").style.backgroundColor = "green";
+				document.getElementById("19").style.color = "white";
+				document.getElementById("19").style.borderColor = "white";
+			}
+			if (q20 == 1)
+			{
+				document.getElementById("20").style.backgroundColor = "green";
+				document.getElementById("20").style.color = "white";
+				document.getElementById("20").style.borderColor = "white";
+			}
+			if (q21 == 1)
+			{
+				document.getElementById("21").style.backgroundColor = "green";
+				document.getElementById("21").style.color = "white";
+				document.getElementById("21").style.borderColor = "white";
+			}
+		}
+		
+		function Question1a()
+		{
+			document.getElementById("Question2").style.display = "";
+			document.getElementById("br1").style.display = "";
+			q1 = 0;
+			document.getElementById("1a").style.opacity = 0.5;
+			document.getElementById("1b").style.opacity = 1;
+			document.getElementById("1c").style.opacity = 1;
+			document.getElementById("1d").style.opacity = 1;
+		}
+		function Question1b()
+		{
+			document.getElementById("Question2").style.display = "";
+			document.getElementById("br1").style.display = "";
+			q1 = 0;
+			document.getElementById("1a").style.opacity = 1;
+			document.getElementById("1b").style.opacity = 0.5;
+			document.getElementById("1c").style.opacity = 1;
+			document.getElementById("1d").style.opacity = 1;
+		}
+		function Question1c()
+		{
+			document.getElementById("Question2").style.display = "";
+			document.getElementById("br1").style.display = "";
+			q1 = 1;
+			document.getElementById("1a").style.opacity = 1;
+			document.getElementById("1b").style.opacity = 1;
+			document.getElementById("1c").style.opacity = 0.5;
+			document.getElementById("1d").style.opacity = 1;
+		}
+		function Question1d()
+		{
+			document.getElementById("Question2").style.display = "";
+			document.getElementById("br1").style.display = "";
+			q1 = 0;
+			document.getElementById("1a").style.opacity = 1;
+			document.getElementById("1b").style.opacity = 1;
+			document.getElementById("1c").style.opacity = 1;
+			document.getElementById("1d").style.opacity = 0.5;
+		}
+		
+		function Question2a()
+		{
+			document.getElementById("Question3").style.display = "";
+			document.getElementById("br2").style.display = "";
+			q2 = 0;
+			document.getElementById("2a").style.opacity = 0.5;
+			document.getElementById("2b").style.opacity = 1;
+			document.getElementById("2c").style.opacity = 1;
+			document.getElementById("2d").style.opacity = 1;
+		}
+		function Question2b()
+		{
+			document.getElementById("Question3").style.display = "";
+			document.getElementById("br2").style.display = "";
+			q2 = 1;
+			document.getElementById("2a").style.opacity = 1;
+			document.getElementById("2b").style.opacity = 0.5;
+			document.getElementById("2c").style.opacity = 1;
+			document.getElementById("2d").style.opacity = 1;
+		}
+		function Question2c()
+		{
+			document.getElementById("Question3").style.display = "";
+			document.getElementById("br2").style.display = "";
+			q2 = 0;
+			document.getElementById("2a").style.opacity = 1;
+			document.getElementById("2b").style.opacity = 1;
+			document.getElementById("2c").style.opacity = 0.5;
+			document.getElementById("2d").style.opacity = 1;
+		}
+		function Question2d()
+		{
+			document.getElementById("Question3").style.display = "";
+			document.getElementById("br2").style.display = "";
+			q2 = 0;
+			document.getElementById("2a").style.opacity = 1;
+			document.getElementById("2b").style.opacity = 1;
+			document.getElementById("2c").style.opacity = 1;
+			document.getElementById("2d").style.opacity = 0.5;
+		}
+		
+		function Question3a()
+		{
+			document.getElementById("Question4").style.display = "";
+			document.getElementById("br3").style.display = "";
+			q3 = 1;
+			document.getElementById("3a").style.opacity = 0.5;
+			document.getElementById("3b").style.opacity = 1;
+			document.getElementById("3c").style.opacity = 1;
+			document.getElementById("3d").style.opacity = 1;
+		}
+		function Question3b()
+		{
+			document.getElementById("Question4").style.display = "";
+			document.getElementById("br3").style.display = "";
+			q3 = 0;
+			document.getElementById("3a").style.opacity = 1;
+			document.getElementById("3b").style.opacity = 0.5;
+			document.getElementById("3c").style.opacity = 1;
+			document.getElementById("3d").style.opacity = 1;
+		}
+		function Question3c()
+		{
+			document.getElementById("Question4").style.display = "";
+			document.getElementById("br3").style.display = "";
+			q3 = 0;
+			document.getElementById("3a").style.opacity = 1;
+			document.getElementById("3b").style.opacity = 1;
+			document.getElementById("3c").style.opacity = 0.5;
+			document.getElementById("3d").style.opacity = 1;
+		}
+		function Question3d()
+		{
+			document.getElementById("Question4").style.display = "";
+			document.getElementById("br3").style.display = "";
+			q3 = 0;
+			document.getElementById("3a").style.opacity = 1;
+			document.getElementById("3b").style.opacity = 1;
+			document.getElementById("3c").style.opacity = 1;
+			document.getElementById("3d").style.opacity = 0.5;
+		}
+		
+		function Question4a()
+		{
+			document.getElementById("Question5").style.display = "";
+			document.getElementById("br4").style.display = "";
+			q4 = 0;
+			document.getElementById("4a").style.opacity = 0.5;
+			document.getElementById("4b").style.opacity = 1;
+			document.getElementById("4c").style.opacity = 1;
+			document.getElementById("4d").style.opacity = 1;
+		}
+		function Question4b()
+		{
+			document.getElementById("Question5").style.display = "";
+			document.getElementById("br4").style.display = "";
+			q4 = 1;
+			document.getElementById("4a").style.opacity = 1;
+			document.getElementById("4b").style.opacity = 0.5;
+			document.getElementById("4c").style.opacity = 1;
+			document.getElementById("4d").style.opacity = 1;
+		}
+		function Question4c()
+		{
+			document.getElementById("Question5").style.display = "";
+			document.getElementById("br4").style.display = "";
+			q4 = 0;
+			document.getElementById("4a").style.opacity = 1;
+			document.getElementById("4b").style.opacity = 1;
+			document.getElementById("4c").style.opacity = 0.5;
+			document.getElementById("4d").style.opacity = 1;
+		}
+		function Question4d()
+		{
+			document.getElementById("Question5").style.display = "";
+			document.getElementById("br4").style.display = "";
+			q4 = 0;
+			document.getElementById("4a").style.opacity = 1;
+			document.getElementById("4b").style.opacity = 1;
+			document.getElementById("4c").style.opacity = 1;
+			document.getElementById("4d").style.opacity = 0.5;
+		}
+		function Question4()
+		{
+			var answer4=document.getElementById("4").value;
+            if(answer4=="bi" || answer4=="bisexual")
+           	{
+               	q4bonus = 0.5;
+            }
+			else
+			{
+				q4bonus = 0;
+			}
+		}
+		
+		function Question5a()
+		{
+			document.getElementById("Question6").style.display = "";
+			document.getElementById("br5").style.display = "";
+			q5 = 0;
+			document.getElementById("5a").style.opacity = 0.5;
+			document.getElementById("5b").style.opacity = 1;
+			document.getElementById("5c").style.opacity = 1;
+			document.getElementById("5d").style.opacity = 1;
+		}
+		function Question5b()
+		{
+			document.getElementById("Question6").style.display = "";
+			document.getElementById("br5").style.display = "";
+			q5 = 0;
+			document.getElementById("5a").style.opacity = 1;
+			document.getElementById("5b").style.opacity = 0.5;
+			document.getElementById("5c").style.opacity = 1;
+			document.getElementById("5d").style.opacity = 1;
+		}
+		function Question5c()
+		{
+			document.getElementById("Question6").style.display = "";
+			document.getElementById("br5").style.display = "";
+			q5 = 1;
+			document.getElementById("5a").style.opacity = 1;
+			document.getElementById("5b").style.opacity = 1;
+			document.getElementById("5c").style.opacity = 0.5;
+			document.getElementById("5d").style.opacity = 1;
+		}
+		function Question5d()
+		{
+			document.getElementById("Question6").style.display = "";
+			document.getElementById("br5").style.display = "";
+			q5 = 0;
+			document.getElementById("5a").style.opacity = 1;
+			document.getElementById("5b").style.opacity = 1;
+			document.getElementById("5c").style.opacity = 1;
+			document.getElementById("5d").style.opacity = 0.5;
+		}
+		
+		function Question6a()
+		{
+			if (q6a == 0)
+			{
+				if (q6amount == 0)
+				{
+					q6a = 1;
+					q6amount = 1;
+					document.getElementById("6a").style.opacity = 0.5;
+				}
+				else if (q6amount == 1)
+				{
+					q6a = 1;
+					q6amount = 2;
+					document.getElementById("6a").style.opacity = 0.5;
+					document.getElementById("br6").style.display = "";
+					document.getElementById("Question7").style.display = "";
+				}
+				else
+				{
+					alert("Please unselect an option before you continue");
+				}
+			}
+			else
+			{
+				if (q6amount == 1)
+				{
+					q6a = 0;
+					q6amount = 0;
+					document.getElementById("6a").style.opacity = 1;
+				}
+				else
+				{
+					q6a = 0;
+					q6amount = 1;
+					document.getElementById("6a").style.opacity = 1;
+				}
+			}
+		}
+		function Question6b()
+		{
+			if (q6b == 0)
+			{
+				if (q6amount == 0)
+				{
+					q6b = 1;
+					q6A = 0.5;
+					q6amount = 1;
+					document.getElementById("6b").style.opacity = 0.5;
+				}
+				else if (q6amount == 1)
+				{
+					q6b = 1;
+					q6A = 0.5;
+					q6amount = 2;
+					document.getElementById("6b").style.opacity = 0.5;
+					document.getElementById("br6").style.display = "";
+					document.getElementById("Question7").style.display = "";
+				}
+				else
+				{
+					alert("Please unselect an option before you continue");
+				}
+			}
+			else
+			{
+				if (q6amount == 1)
+				{
+					q6b = 0;
+					q6A = 0;
+					q6amount = 0;
+					document.getElementById("6b").style.opacity = 1;
+				}
+				else
+				{
+					q6b = 0;
+					q6A = 0;
+					q6amount = 1;
+					document.getElementById("6b").style.opacity = 1;
+				}
+			}
+		}
+		function Question6c()
+		{
+			if (q6c == 0)
+			{
+				if (q6amount == 0)
+				{
+					q6c = 1;
+					q6amount = 1;
+					document.getElementById("6c").style.opacity = 0.5;
+				}
+				else if (q6amount == 1)
+				{
+					q6c = 1;
+					q6amount = 2;
+					document.getElementById("6c").style.opacity = 0.5;
+					document.getElementById("br6").style.display = "";
+					document.getElementById("Question7").style.display = "";
+				}
+				else
+				{
+					alert("Please unselect an option before you continue");
+				}
+			}
+			else
+			{
+				if (q6amount == 1)
+				{
+					q6c = 0;
+					q6amount = 0;
+					document.getElementById("6c").style.opacity = 1;
+				}
+				else
+				{
+					q6c = 0;
+					q6amount = 1;
+					document.getElementById("6c").style.opacity = 1;
+				}
+			}
+		}
+		function Question6d()
+		{
+			if (q6d == 0)
+			{
+				if (q6amount == 0)
+				{
+					q6d = 1;
+					q6amount = 1;
+					document.getElementById("6d").style.opacity = 0.5;
+				}
+				else if (q6amount == 1)
+				{
+					q6d = 1;
+					q6amount = 2;
+					document.getElementById("6d").style.opacity = 0.5;
+					document.getElementById("br6").style.display = "";
+					document.getElementById("Question7").style.display = "";
+				}
+				else
+				{
+					alert("Please unselect an option before you continue");
+				}
+			}
+			else
+			{
+				if (q6amount == 1)
+				{
+					q6d = 0;
+					q6amount = 0;
+					document.getElementById("6d").style.opacity = 1;
+				}
+				else
+				{
+					q6d = 0;
+					q6amount = 1;
+					document.getElementById("6d").style.opacity = 1;
+				}
+			}
+		}
+		function Question6e()
+		{
+			if (q6e == 0)
+			{
+				if (q6amount == 0)
+				{
+					q6e = 1;
+					q6B = 0.5;
+					q6amount = 1;
+					document.getElementById("6e").style.opacity = 0.5;
+				}
+				else if (q6amount == 1)
+				{
+					q6e = 1;
+					q6B = 0.5;
+					q6amount = 2;
+					document.getElementById("6e").style.opacity = 0.5;
+					document.getElementById("br6").style.display = "";
+					document.getElementById("Question7").style.display = "";
+				}
+				else
+				{
+					alert("Please unselect an option before you continue");
+				}
+			}
+			else
+			{
+				if (q6amount == 1)
+				{
+					q6e = 0;
+					q6B = 0;
+					q6amount = 0;
+					document.getElementById("6e").style.opacity = 1;
+				}
+				else
+				{
+					q6e = 0;
+					q6B = 0;
+					q6amount = 1;
+					document.getElementById("6e").style.opacity = 1;
+				}
+			}
+		}
+		function Question6f()
+		{
+			if (q6f == 0)
+			{
+				if (q6amount == 0)
+				{
+					q6f = 1;
+					q6amount = 1;
+					document.getElementById("6f").style.opacity = 0.5;
+				}
+				else if (q6amount == 1)
+				{
+					q6f = 1;
+					q6amount = 2;
+					document.getElementById("6f").style.opacity = 0.5;
+					document.getElementById("br6").style.display = "";
+					document.getElementById("Question7").style.display = "";
+				}
+				else
+				{
+					alert("Please unselect an option before you continue");
+				}
+			}
+			else
+			{
+				if (q6amount == 1)
+				{
+					q6f = 0;
+					q6amount = 0;
+					document.getElementById("6f").style.opacity = 1;
+				}
+				else
+				{
+					q6f = 0;
+					q6amount = 1;
+					document.getElementById("6f").style.opacity = 1;
+				}
+			}
+		}
+		
+		function Question7a()
+		{
+			if (q7a == 0)
+			{
+				if (q7amount == 0)
+				{
+					q7a = 1;
+					q7A = 0.25;
+					q7amount = 1;
+					document.getElementById("7a").style.opacity = 0.5;
+				}
+				else if (q7amount == 1)
+				{
+					q7a = 1;
+					q7A = 0.25;
+					q7amount = 2;
+					document.getElementById("7a").style.opacity = 0.5;
+				}
+				else if (q7amount == 2)
+				{
+					q7a = 1;
+					q7A = 0.25;
+					q7amount = 3;
+					document.getElementById("7a").style.opacity = 0.5;
+				}
+				else if (q7amount == 3)
+				{
+					q7a = 1;
+					q7A = 0.25;
+					q7amount = 4;
+					document.getElementById("7a").style.opacity = 0.5;
+					document.getElementById("br7").style.display = "";
+					document.getElementById("Question8").style.display = "";
+				}
+				else
+				{
+					alert("Please unselect an option before you continue");
+				}
+			}
+			else
+			{
+				if (q7amount == 1)
+				{
+					q7a = 0;
+					q7A = 0;
+					q7amount = 0;
+					document.getElementById("7a").style.opacity = 1;
+				}
+				else if (q7amount == 2)
+				{
+					q7a = 0;
+					q7A = 0;
+					q7amount = 1;
+					document.getElementById("7a").style.opacity = 1;
+				}
+				else if (q7amount == 3)
+				{
+					q7a = 0;
+					q7A = 0;
+					q7amount = 2;
+					document.getElementById("7a").style.opacity = 1;
+				}
+				else
+				{
+					q7a = 0;
+					q7A = 0;
+					q7amount = 3;
+					document.getElementById("7a").style.opacity = 1;
+				}
+			}
+		}
+		function Question7b()
+		{
+			if (q7b == 0)
+			{
+				if (q7amount == 0)
+				{
+					q7b = 1;
+					q7B = 0.25;
+					q7amount = 1;
+					document.getElementById("7b").style.opacity = 0.5;
+				}
+				else if (q7amount == 1)
+				{
+					q7b = 1;
+					q7B = 0.25;
+					q7amount = 2;
+					document.getElementById("7b").style.opacity = 0.5;
+				}
+				else if (q7amount == 2)
+				{
+					q7b = 1;
+					q7B = 0.25;
+					q7amount = 3;
+					document.getElementById("7b").style.opacity = 0.5;
+				}
+				else if (q7amount == 3)
+				{
+					q7b = 1;
+					q7B = 0.25;
+					q7amount = 4;
+					document.getElementById("7b").style.opacity = 0.5;
+					document.getElementById("br7").style.display = "";
+					document.getElementById("Question8").style.display = "";
+				}
+				else
+				{
+					alert("Please unselect an option before you continue");
+				}
+			}
+			else
+			{
+				if (q7amount == 1)
+				{
+					q7b = 0;
+					q7B = 0;
+					q7amount = 0;
+					document.getElementById("7b").style.opacity = 1;
+				}
+				else if (q7amount == 2)
+				{
+					q7b = 0;
+					q7B = 0;
+					q7amount = 1;
+					document.getElementById("7b").style.opacity = 1;
+				}
+				else if (q7amount == 3)
+				{
+					q7b = 0;
+					q7B = 0;
+					q7amount = 2;
+					document.getElementById("7b").style.opacity = 1;
+				}
+				else
+				{
+					q7b = 0;
+					q7B = 0;
+					q7amount = 3;
+					document.getElementById("7b").style.opacity = 1;
+				}
+			}
+		}
+		function Question7c()
+		{
+			if (q7c == 0)
+			{
+				if (q7amount == 0)
+				{
+					q7c = 1;
+					q7C = 0.25;
+					q7amount = 1;
+					document.getElementById("7c").style.opacity = 0.5;
+				}
+				else if (q7amount == 1)
+				{
+					q7c = 1;
+					q7C = 0.25;
+					q7amount = 2;
+					document.getElementById("7c").style.opacity = 0.5;
+				}
+				else if (q7amount == 2)
+				{
+					q7c = 1;
+					q7C = 0.25;
+					q7amount = 3;
+					document.getElementById("7c").style.opacity = 0.5;
+				}
+				else if (q7amount == 3)
+				{
+					q7c = 1;
+					q7C = 0.25;
+					q7amount = 4;
+					document.getElementById("7c").style.opacity = 0.5;
+					document.getElementById("br7").style.display = "";
+					document.getElementById("Question8").style.display = "";
+				}
+				else
+				{
+					alert("Please unselect an option before you continue");
+				}
+			}
+			else
+			{
+				if (q7amount == 1)
+				{
+					q7c = 0;
+					q7C = 0;
+					q7amount = 0;
+					document.getElementById("7c").style.opacity = 1;
+				}
+				else if (q7amount == 2)
+				{
+					q7c = 0;
+					q7C = 0;
+					q7amount = 1;
+					document.getElementById("7c").style.opacity = 1;
+				}
+				else if (q7amount == 3)
+				{
+					q7c = 0;
+					q7C = 0;
+					q7amount = 2;
+					document.getElementById("7c").style.opacity = 1;
+				}
+				else
+				{
+					q7c = 0;
+					q7C = 0;
+					q7amount = 3;
+					document.getElementById("7c").style.opacity = 1;
+				}
+			}
+		}
+		function Question7d()
+		{
+			if (q7d == 0)
+			{
+				if (q7amount == 0)
+				{
+					q7d = 1;
+					q7D = 0.25;
+					q7amount = 1;
+					document.getElementById("7d").style.opacity = 0.5;
+				}
+				else if (q7amount == 1)
+				{
+					q7d = 1;
+					q7D = 0.25;
+					q7amount = 2;
+					document.getElementById("7d").style.opacity = 0.5;
+				}
+				else if (q7amount == 2)
+				{
+					q7d = 1;
+					q7D = 0.25;
+					q7amount = 3;
+					document.getElementById("7d").style.opacity = 0.5;
+				}
+				else if (q7amount == 3)
+				{
+					q7d = 1;
+					q7D = 0.25;
+					q7amount = 4;
+					document.getElementById("7d").style.opacity = 0.5;
+					document.getElementById("br7").style.display = "";
+					document.getElementById("Question8").style.display = "";
+				}
+				else
+				{
+					alert("Please unselect an option before you continue");
+				}
+			}
+			else
+			{
+				if (q7amount == 1)
+				{
+					q7d = 0;
+					q7D = 0;
+					q7amount = 0;
+					document.getElementById("7d").style.opacity = 1;
+				}
+				else if (q7amount == 2)
+				{
+					q7d = 0;
+					q7D = 0;
+					q7amount = 1;
+					document.getElementById("7d").style.opacity = 1;
+				}
+				else if (q7amount == 3)
+				{
+					q7d = 0;
+					q7D = 0;
+					q7amount = 2;
+					document.getElementById("7d").style.opacity = 1;
+				}
+				else
+				{
+					q7d = 0;
+					q7D = 0;
+					q7amount = 3;
+					document.getElementById("7d").style.opacity = 1;
+				}
+			}
+		}
+		function Question7e()
+		{
+			if (q7e == 0)
+			{
+				if (q7amount == 0)
+				{
+					q7e = 1;
+					q7amount = 1;
+					document.getElementById("7e").style.opacity = 0.5;
+				}
+				else if (q7amount == 1)
+				{
+					q7e = 1;
+					q7amount = 2;
+					document.getElementById("7e").style.opacity = 0.5;
+				}
+				else if (q7amount == 2)
+				{
+					q7e = 1;
+					q7amount = 3;
+					document.getElementById("7e").style.opacity = 0.5;
+				}
+				else if (q7amount == 3)
+				{
+					q7e = 1;
+					q7amount = 4;
+					document.getElementById("7e").style.opacity = 0.5;
+					document.getElementById("br7").style.display = "";
+					document.getElementById("Question8").style.display = "";
+				}
+				else
+				{
+					alert("Please unselect an option before you continue");
+				}
+			}
+			else
+			{
+				if (q7amount == 1)
+				{
+					q7e = 0;
+					q7amount = 0;
+					document.getElementById("7e").style.opacity = 1;
+				}
+				else if (q7amount == 2)
+				{
+					q7e = 0;
+					q7amount = 1;
+					document.getElementById("7e").style.opacity = 1;
+				}
+				else if (q7amount == 3)
+				{
+					q7e = 0;
+					q7amount = 2;
+					document.getElementById("7e").style.opacity = 1;
+				}
+				else
+				{
+					q7e = 0;
+					q7amount = 3;
+					document.getElementById("7e").style.opacity = 1;
+				}
+			}
+		}
+		function Question7f()
+		{
+			if (q7f == 0)
+			{
+				if (q7amount == 0)
+				{
+					q7f = 1;
+					q7amount = 1;
+					document.getElementById("7f").style.opacity = 0.5;
+				}
+				else if (q7amount == 1)
+				{
+					q7f = 1;
+					q7amount = 2;
+					document.getElementById("7f").style.opacity = 0.5;
+				}
+				else if (q7amount == 2)
+				{
+					q7f = 1;
+					q7amount = 3;
+					document.getElementById("7f").style.opacity = 0.5;
+				}
+				else if (q7amount == 3)
+				{
+					q7f = 1;
+					q7amount = 4;
+					document.getElementById("7f").style.opacity = 0.5;
+					document.getElementById("br7").style.display = "";
+					document.getElementById("Question8").style.display = "";
+				}
+				else
+				{
+					alert("Please unselect an option before you continue");
+				}
+			}
+			else
+			{
+				if (q7amount == 1)
+				{
+					q7f = 0;
+					q7amount = 0;
+					document.getElementById("7f").style.opacity = 1;
+				}
+				else if (q7amount == 2)
+				{
+					q7f = 0;
+					q7amount = 1;
+					document.getElementById("7f").style.opacity = 1;
+				}
+				else if (q7amount == 3)
+				{
+					q7f = 0;
+					q7amount = 2;
+					document.getElementById("7f").style.opacity = 1;
+				}
+				else
+				{
+					q7f = 0;
+					q7amount = 3;
+					document.getElementById("7f").style.opacity = 1;
+				}
+			}
+		}
+		
+		function Question8t()
+		{
+			document.getElementById("Question9").style.display = "";
+			document.getElementById("br8").style.display = "";
+			q8 = 0;
+			document.getElementById("8t").style.opacity = 0.5;
+			document.getElementById("8f").style.opacity = 1;
+		}
+		function Question8f()
+		{
+			document.getElementById("Question9").style.display = "";
+			document.getElementById("br8").style.display = "";
+			q8 = 1;
+			document.getElementById("8t").style.opacity = 1;
+			document.getElementById("8f").style.opacity = 0.5;
+		}
+		
+		function Question9t()
+		{
+			document.getElementById("Question10").style.display = "";
+			document.getElementById("br9").style.display = "";
+			q9 = 0;
+			document.getElementById("9t").style.opacity = 0.5;
+			document.getElementById("9f").style.opacity = 1;
+		}
+		function Question9f()
+		{
+			document.getElementById("Question10").style.display = "";
+			document.getElementById("br9").style.display = "";
+			q9 = 1;
+			document.getElementById("9t").style.opacity = 1;
+			document.getElementById("9f").style.opacity = 0.5;
+		}
+		
+		function Question10t()
+		{
+			document.getElementById("Question11").style.display = "";
+			document.getElementById("br10").style.display = "";
+			q10 = 0;
+			document.getElementById("10t").style.opacity = 0.5;
+			document.getElementById("10f").style.opacity = 1;
+		}
+		function Question10f()
+		{
+			document.getElementById("Question11").style.display = "";
+			document.getElementById("br10").style.display = "";
+			q10 = 1;
+			document.getElementById("10t").style.opacity = 1;
+			document.getElementById("10f").style.opacity = 0.5;
+		}
+		
+		function Question11t()
+		{
+			document.getElementById("Question12").style.display = "";
+			document.getElementById("br11").style.display = "";
+			q11 = 0;
+			document.getElementById("11t").style.opacity = 0.5;
+			document.getElementById("11f").style.opacity = 1;
+		}
+		function Question11f()
+		{
+			document.getElementById("Question12").style.display = "";
+			document.getElementById("br11").style.display = "";
+			q11 = 1;
+			document.getElementById("11t").style.opacity = 1;
+			document.getElementById("11f").style.opacity = 0.5;
+		}
+		
+		function Question12t()
+		{
+			document.getElementById("Question13").style.display = "";
+			document.getElementById("br12").style.display = "";
+			q12 = 1;
+			document.getElementById("12t").style.opacity = 0.5;
+			document.getElementById("12f").style.opacity = 1;
+		}
+		function Question12f()
+		{
+			document.getElementById("Question13").style.display = "";
+			document.getElementById("br12").style.display = "";
+			q12 = 0;
+			document.getElementById("12t").style.opacity = 1;
+			document.getElementById("12f").style.opacity = 0.5;
+		}
+		
+		function Question13t()
+		{
+			document.getElementById("Question14").style.display = "";
+			document.getElementById("br13").style.display = "";
+			q13 = 2;
+			document.getElementById("13t").style.opacity = 0.5;
+			document.getElementById("13f").style.opacity = 1;
+			document.getElementById("13infot").style.display = "";
+		}
+		function Question13f()
+		{
+			document.getElementById("Question14").style.display = "";
+			document.getElementById("br13").style.display = "";
+			q13 = 1;
+			document.getElementById("13t").style.opacity = 1;
+			document.getElementById("13f").style.opacity = 0.5;
+			document.getElementById("13infof").style.display = "";
+		}
+		
+		function Question14t()
+		{
+			document.getElementById("Question15").style.display = "";
+			document.getElementById("br14").style.display = "";
+			q14 = 1;
+			document.getElementById("14t").style.opacity = 0.5;
+			document.getElementById("14f").style.opacity = 1;
+		}
+		function Question14f()
+		{
+			document.getElementById("Question15").style.display = "";
+			document.getElementById("br14").style.display = "";
+			q14 = 0;
+			document.getElementById("14t").style.opacity = 1;
+			document.getElementById("14f").style.opacity = 0.5;
+		}
+		
+		function Question15()
+		{
+			document.getElementById("Question16").style.display = "";
+			document.getElementById("br15").style.display = "";
+			var answer15a=document.getElementById("15a").value;
+			var answer15b=document.getElementById("15b").value;
+			var answer15c=document.getElementById("15c").value;
+			var answer15d=document.getElementById("15d").value;
+           	q15A = 0;
+           	q15B = 0;
+           	q15C = 0;
+           	q15D = 0;
+           	q15Abonus = 0;
+           	q15Bbonus = 0;
+           	q15Cbonus = 0;
+           	q15Dbonus = 0;
+			
+            if(answer15a=="purple")
+           	{
+               	q15A = 0.25;
+               	q15Abonus = 1;
+            }
+			else if(answer15a=="blue")
+			{
+				q15B = 0.25;
+               	q15Abonus = 0;
+			}
+			else if(answer15a=="red")
+			{
+				q15C = 0.25;
+               	q15Abonus = 0;
+			}
+			else if(answer15a=="pink")
+			{
+				q15D = 0.25;
+               	q15Abonus = 0;
+			}
+			else
+			{
+               	q15Abonus = 0;
+			}
+			
+            if(answer15b=="purple")
+           	{
+               	q15A = 0.25;
+               	q15Bbonus = 0;
+            }
+			else if(answer15b=="blue")
+			{
+				q15B = 0.25;
+               	q15Bbonus = 1;
+			}
+			else if(answer15b=="red")
+			{
+				q15C = 0.25;
+               	q15Bbonus = 0;
+			}
+			else if(answer15b=="pink")
+			{
+				q15D = 0.25;
+               	q15Bbonus = 0;
+			}
+			else
+			{
+               	q15Bbonus = 0;
+			}
+			
+            if(answer15c=="purple")
+           	{
+               	q15A = 0.25;
+               	q15Cbonus = 0;
+            }
+			else if(answer15c=="blue")
+			{
+				q15B = 0.25;
+               	q15Cbonus = 0;
+			}
+			else if(answer15c=="red")
+			{
+				q15C = 0.25;
+               	q15Cbonus = 1;
+			}
+			else if(answer15c=="pink")
+			{
+				q15D = 0.25;
+               	q15Cbonus = 0;
+			}
+			else
+			{
+               	q15Cbonus = 0;
+			}
+			
+            if(answer15d=="purple")
+           	{
+               	q15A = 0.25;
+               	q15Dbonus = 0;
+            }
+			else if(answer15d=="blue")
+			{
+				q15B = 0.25;
+               	q15Dbonus = 0;
+			}
+			else if(answer15d=="red")
+			{
+				q15C = 0.25;
+               	q15Dbonus = 0;
+			}
+			else if(answer15d=="pink")
+			{
+				q15D = 0.25;
+               	q15Dbonus = 1;
+			}
+			else
+			{
+               	q15Dbonus = 0;
+			}
+		}
+		
+		function Question16()
+		{
+			document.getElementById("Question17").style.display = "";
+			document.getElementById("br16").style.display = "";
+			var answer16a=document.getElementById("16a").value;
+			var answer16b=document.getElementById("16b").value;
+			var answer16c=document.getElementById("16c").value;
+			var answer16d=document.getElementById("16d").value;			
+            q16A = 0;
+            q16B = 0;
+            q16C = 0;
+            q16D = 0;
+            
+			if(answer16a=="jackson")
+           	{
+               	q16A = 0.25;
+            }
+			else if(answer16a=="jaxon")
+			{
+				q16A = 0.125;
+			}
+			else if(answer16a=="max")
+			{
+				q16B = 0.25;
+			}
+			else if(answer16a=="minna")
+			{
+				q16C = 0.25;
+			}
+			else if(answer16a=="mina")
+			{
+				q16C = 0.125;
+			}
+			else if(answer16a=="ronan")
+			{
+				q16D = 0.25;
+			}
+			
+            if(answer16b=="jackson")
+           	{
+               	q16A = 0.25;
+            }
+			else if(answer16b=="jaxon")
+			{
+				q16A = 0.125;
+			}
+			else if(answer16b=="max")
+			{
+				q16B = 0.25;
+			}
+			else if(answer16b=="minna")
+			{
+				q16C = 0.25;
+			}
+			else if(answer16b=="mina")
+			{
+				q16C = 0.125;
+			}
+			else if(answer16b=="ronan")
+			{
+				q16D = 0.25;
+			}
+			
+            if(answer16c=="jackson")
+           	{
+               	q16A = 0.25;
+            }
+			else if(answer16c=="jaxon")
+			{
+				q16A = 0.125;
+			}
+			else if(answer16c=="max")
+			{
+				q16B = 0.25;
+			}
+			else if(answer16c=="minna")
+			{
+				q16C = 0.25;
+			}
+			else if(answer16c=="mina")
+			{
+				q16C = 0.125;
+			}
+			else if(answer16c=="ronan")
+			{
+				q16D = 0.25;
+			}
+			
+            if(answer16d=="jackson")
+           	{
+               	q16A = 0.25;
+            }
+			else if(answer16d=="jaxon")
+			{
+				q16A = 0.125;
+			}
+			else if(answer16d=="max")
+			{
+				q16B = 0.25;
+			}
+			else if(answer16d=="minna")
+			{
+				q16C = 0.25;
+			}
+			else if(answer16d=="mina")
+			{
+				q16C = 0.125;
+			}
+			else if(answer16d=="ronan")
+			{
+				q16D = 0.75;
+			}
+		}
+		
+		function Question17()
+		{
+			document.getElementById("Question18").style.display = "";
+			document.getElementById("br17").style.display = "";
+			var answer17=document.getElementById("17").value;			
+            if(answer17=="where the mountain meets the moon")
+           	{
+               	q17 = 1;
+            }
+			else
+			{
+				q17 = 0;
+			}
+		}
+		
+		function Question18()
+		{
+			document.getElementById("Question19").style.display = "";
+			document.getElementById("br18").style.display = "";
+			var answer18=document.getElementById("18").value;			
+            if(answer18=="wicked")
+           	{
+               	q18 = 1;
+            }
+			else
+			{
+				q18 = 0;
+			}
+		}
+		
+		function Question19()
+		{
+			document.getElementById("Question20").style.display = "";
+			document.getElementById("br19").style.display = "";
+			var answer19=document.getElementById("19").value;			
+            if(answer19=="fall")
+           	{
+               	q19 = 1;
+            }
+			else if (answer19=="autumn")
+			{
+				q19 = 0.5;
+			}
+			else
+			{
+				q19 = 0;
+			}
+		}
+		
+		function Question20()
+		{
+			document.getElementById("Question21").style.display = "";
+			document.getElementById("br20").style.display = "";
+			var answer20=document.getElementById("20").value;			
+            if(answer20=="teach" || answer20=="teacher" || answer20=="teaching")
+           	{
+               	q20 = 1;
+            }
+			else
+			{
+				q20 = 0;
+			}
+		}
+		
+		function Question21()
+		{
+			document.getElementById("submit").style.display = "";
+			document.getElementById("br21").style.display = "";
+			var answer21=document.getElementById("21").value;			
+            if(answer21=="november third" || answer21=="november 3rd" || answer21=="november 3")
+           	{
+               	q21 = 1;
+            }
+			else
+			{
+				q21 = 0;
+			}
+		}
+	</script>
+</html>
